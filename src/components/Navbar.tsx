@@ -1,7 +1,16 @@
 import { ReactNode, useState } from "react";
 import vite from "/vite.svg";
 
-export default function Navbar(): ReactNode {
+type Location = {
+  path: string;
+  name: string;
+};
+
+interface Props {
+  items: Location[];
+}
+
+export default function Navbar({ items }: Props): ReactNode {
   const [username, setUsername] = useState<string | null>(
     localStorage.getItem("username")
   );
@@ -43,6 +52,7 @@ export default function Navbar(): ReactNode {
                 Shopperators
               </h1>
             </section>
+
             <section className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4" id="desktop-nav">
                 <a
@@ -50,8 +60,19 @@ export default function Navbar(): ReactNode {
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
                 >
-                  Shop
+                  Home
                 </a>
+                
+                {items.map((location) => (
+                  <a
+                    key={location.path}
+                    href={location.path}
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                  >
+                    {location.name}
+                  </a>
+                ))}
               </div>
             </section>
           </article>
