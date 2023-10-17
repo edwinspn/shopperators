@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html,
+#app,
+#root {
+  font-family: "Roboto", Helvetica, Arial, sans-serif !important;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main {
+    flex-grow: 1;
+}
