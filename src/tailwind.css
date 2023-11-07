@@ -172,10 +172,37 @@ sup {
 table {
   text-indent: 0;
   /* 1 */
-  border-color: inherit;
+  border-color: red;
   /* 2 */
   border-collapse: collapse;
   /* 3 */
+
+}
+
+.groceries{
+  font-family: Verdana;
+}
+.page-title{
+  color: white;
+  font-size: 36px;
+  text-align: center;
+}
+.table1 {
+}
+.table-row {
+  color: white;
+}
+.table-column {
+  padding: 10px;
+  color: white;
+}
+.table-body {
+  padding: 10px;
+  color: white;
+}
+.button {
+  background-color: green;
+  border: none;
 }
 
 /*
