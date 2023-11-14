@@ -19,7 +19,7 @@ export default function Home(): ReactNode {
             className="px-24"
             width={1600}
             height={100}
-            src="src/assets/grocery2.jpg"
+            src="grocery2.jpg"
             alt="Promotional Banner"
           />
           <div className="promo-text text-center">

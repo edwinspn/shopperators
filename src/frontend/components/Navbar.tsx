@@ -1,5 +1,6 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useContext } from "react";
 import vite from "/vite.svg";
+import { AuthContext, AuthContextModel } from "../Layout";
 
 type Location = {
   path: string;
@@ -10,15 +11,8 @@ interface Props {
   items: Location[];
 }
 
-export default function Navbar({ items }: Props): ReactNode {
-  const [username, setUsername] = useState<string | null>(
-    localStorage.getItem("username")
-  );
-
-  const logout = () => {
-    localStorage.removeItem("username");
-    setUsername(null);
-  };
+export default function Navbar({ items }: Readonly<Props>): ReactNode {
+  const { currentUser, logout } = useContext<AuthContextModel>(AuthContext);
 
   return (
     <nav className="w-full bg-gray-800">
@@ -60,9 +54,9 @@ export default function Navbar({ items }: Props): ReactNode {
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
                 >
-                  Home
+                  Shop
                 </a>
-                
+
                 {items.map((location) => (
                   <a
                     key={location.path}
@@ -84,11 +78,13 @@ export default function Navbar({ items }: Props): ReactNode {
 
           <article className="flex flex-1 items-center sm:items-stretch justify-center">
             <section className="flex flex-shrink-0 gap-4 items-center">
-              {username && <p className="text-white">Hello, {username}</p>}
+              {currentUser && (
+                <p className="text-white">Hello, {currentUser.username}</p>
+              )}
             </section>
 
             <section className="hidden sm:ml-6 sm:block">
-              {(username && (
+              {(currentUser && (
                 <button
                   onClick={logout}
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"

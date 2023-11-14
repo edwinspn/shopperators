@@ -2,17 +2,31 @@ import { ChangeEvent, FormEvent, ReactNode, useState } from "react";
 import vite from "/vite.svg";
 import Input from "../components/Input";
 import { IDictionary } from "../types";
+import { remult } from "remult";
+import { User } from "../../shared/User";
 
 export default function Register(): ReactNode {
   const [fields, setFields] = useState<IDictionary<string>>({});
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.stopPropagation();
     event.preventDefault();
 
-    localStorage.setItem("username", fields["username"]);
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: fields["username"],
+        password: fields["password"],
+      }),
+    });
 
-    window.location.pathname = "/";
+    if (res.ok) {
+      remult.user = (await res.json()) as User;
+      window.location.pathname = "/";
+    }
   };
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {

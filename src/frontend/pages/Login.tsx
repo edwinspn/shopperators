@@ -1,25 +1,49 @@
-import { ChangeEvent, FormEvent, ReactNode, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import vite from "/vite.svg";
 import Input from "../components/Input";
 import { IDictionary } from "../types";
 import { Link } from "react-router-dom";
+import { remult } from "remult";
+import { User } from "../../shared/User";
+import { AuthContext, AuthContextModel } from "../Layout";
 
 export default function Login(): ReactNode {
-  const [fields, setFields] = useState<IDictionary<string>>({});
+  const { login } = useContext<AuthContextModel>(AuthContext);
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const [fields, setFields] = useState<IDictionary<string>>({
+    username: "",
+    password: "",
+  });
+
+  useEffect(() => {
+    fetch("/api/user").then(async (r) => {
+      remult.user = (await r.json()) as User;
+      if (remult.user) window.location.pathname = "/";
+    });
+  }, []);
+
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.stopPropagation();
     event.preventDefault();
 
-    localStorage.setItem("username", fields["username"]);
-
-    window.location.pathname = "/";
+    if (login)
+      await login({
+        username: fields["username"],
+        password: fields["password"],
+      });
   };
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFields({
       ...fields,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
