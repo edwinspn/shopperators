@@ -12,7 +12,7 @@ export default function Layout({ children }: Props): ReactNode {
   return (
     <>
       <Navbar items={items} />
-      <main className="bg-gray-900">{children}</main>
+      <main className="bg-slate-900 text-white">{children}</main>
       <Footer />
     </>
   );

@@ -1,22 +1,36 @@
 import { ReactNode } from "react";
-
+import Products from "../components/Products";
+import Categories from "../components/Categories";
+//src/assets/grocery1.jpg
 export default function Home(): ReactNode {
   return (
-    <section className="flex flex-col text-white">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium,
-        vel dicta minus reprehenderit facere saepe, culpa odit voluptatem
-        corporis, obcaecati sint? Laborum quas nulla non provident beatae alias
-        quibusdam soluta saepe fugiat consectetur, tempora ipsum dignissimos
-        repellendus assumenda velit, nesciunt molestias nemo at deserunt ratione
-        quis suscipit tempore officia consequuntur. Distinctio esse deserunt et
-        aspernatur quod consequatur, delectus inventore molestias repellat odio
-        voluptas possimus nulla fugit totam, necessitatibus corporis natus
-        reiciendis? Corrupti, magnam, consequatur temporibus aliquam quam earum
-        ullam, magni debitis enim nisi quasi sint voluptatum quas eum quis
-        delectus laboriosam? Assumenda vitae architecto laudantium odio eum quae
-        dolores omnis.
-      </p>
-    </section>
+    <>
+      <div className="text-center border-2 border-double border-white rounded p-24 mt-10 mx-24">
+        <h1>Welcome to Shopperators</h1>
+        <p>Your one-stop shop for fresh and quality groceries.</p>
+      </div>
+      <section className="flex flex-col gap-10 p-24">
+        <Products></Products>
+
+        <Categories></Categories>
+
+        <div className="promo-banner">
+          <img
+            className="px-24"
+            width={1600}
+            height={100}
+            src="src/assets/grocery2.jpg"
+            alt="Promotional Banner"
+          />
+          <div className="promo-text text-center">
+            <h2>Special Offers</h2>
+            <p>
+              Check out our exclusive deals on selected items. Limited time
+              only!
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
