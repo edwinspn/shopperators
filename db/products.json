@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Orange",
     "description": "Juicy orange",
-    "imageSrc": "grocery3.jpg",
+    "imageSrc": "grocery2.jpg",
     "price": 1.99,
     "weight": 0.75,
     "caloriesPerServing": 62
@@ -30,7 +30,7 @@
     "id": 4,
     "name": "Grapes",
     "description": "Fresh green grapes",
-    "imageSrc": "grocery4.jpg",
+    "imageSrc": "grocery2.jpg",
     "price": 4.99,
     "weight": 2.0,
     "caloriesPerServing": 68
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "Strawberries",
     "description": "Sweet strawberries",
-    "imageSrc": "grocery5.jpg",
+    "imageSrc": "grocery2.jpg",
     "price": 3.49,
     "weight": 1.2,
     "caloriesPerServing": 49
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "Campbell's Tomato Soup",
     "description": "Classic tomato soup",
-    "imageSrc": "tomatosoup.jpg",
+    "imageSrc": "campells.jpg",
     "price": 2.49,
     "weight": 0.5,
     "caloriesPerServing": 90
@@ -84,7 +84,7 @@
     "id": 10,
     "name": "Nestle Chocolate Bar",
     "description": "Smooth milk chocolate",
-    "imageSrc": "chocolatebar.jpg",
+    "imageSrc": "nestle.jpg",
     "price": 1.99,
     "weight": 0.2,
     "caloriesPerServing": 210
@@ -93,7 +93,7 @@
     "id": 11,
     "name": "Lays Potato Chips",
     "description": "Thin and crispy potato chips",
-    "imageSrc": "layschips.jpg",
+    "imageSrc": "lays.jpg",
     "price": 2.79,
     "weight": 0.15,
     "caloriesPerServing": 152
@@ -102,7 +102,7 @@
     "id": 12,
     "name": "Skippy Peanut Butter",
     "description": "Creamy peanut butter",
-    "imageSrc": "skippypeanutbutter.jpg",
+    "imageSrc": "peanut.jpg",
     "price": 4.49,
     "weight": 0.5,
     "caloriesPerServing": 190
@@ -111,7 +111,7 @@
     "id": 13,
     "name": "Quaker Oats",
     "description": "Whole grain oats",
-    "imageSrc": "quakeroats.jpg",
+    "imageSrc": "oats.jpg",
     "price": 3.29,
     "weight": 1.0,
     "caloriesPerServing": 150
@@ -120,7 +120,7 @@
     "id": 14,
     "name": "Heinz Ketchup",
     "description": "Tomato ketchup",
-    "imageSrc": "heinzketchup.jpg",
+    "imageSrc": "=ketchup.jpg",
     "price": 2.99,
     "weight": 0.7,
     "caloriesPerServing": 20
@@ -129,7 +129,7 @@
     "id": 15,
     "name": "Starbucks Coffee",
     "description": "Dark roast coffee beans",
-    "imageSrc": "starbuckscoffee.jpg",
+    "imageSrc": "starbuvks.jpg",
     "price": 7.99,
     "weight": 0.5,
     "caloriesPerServing": 5
@@ -138,7 +138,7 @@
     "id": 16,
     "name": "Oreo Cookies",
     "description": "Chocolate sandwich cookies",
-    "imageSrc": "oreocookies.jpg",
+    "imageSrc": "cookies.jpg",
     "price": 2.69,
     "weight": 0.4,
     "caloriesPerServing": 160
@@ -156,7 +156,7 @@
     "id": 18,
     "name": "Yoplait Yogurt",
     "description": "Creamy fruit yogurt",
-    "imageSrc": "yoplait.jpg",
+    "imageSrc": "yogurt.jpg",
     "price": 0.99,
     "weight": 0.2,
     "caloriesPerServing": 80
@@ -165,7 +165,7 @@
     "id": 19,
     "name": "Hellmann's Mayonnaise",
     "description": "Smooth and creamy mayonnaise",
-    "imageSrc": "hellmanns.jpg",
+    "imageSrc": "download.jpg",
     "price": 3.49,
     "weight": 0.5,
     "caloriesPerServing": 90
