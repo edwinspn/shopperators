@@ -16,7 +16,7 @@ export default function Products(): ReactNode {
       <div className="grid grid-cols-3 gap-4">
         {featuredProducts.map((product) => (
           <article key={product.name} className="flex flex-col gap-4">
-            <img src="yogurt.jpg" alt="Product 1" />
+            <img src="grocery1.jpg" alt="Product 1" />
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <span>
